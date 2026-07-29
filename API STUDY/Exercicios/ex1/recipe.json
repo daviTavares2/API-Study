@@ -1,0 +1,38 @@
+[
+   {
+     "id": "0001",
+     "type": "baunilha",
+     "price": "19.99 R$",
+     "toppings":[
+            {
+                "sabor": "baunilha",
+                "quantity": "2 bolas"
+            }
+            
+        ]
+    },
+     {
+     "id": "0001",
+     "type": "chocolate",
+     "price": "19.99 R$",
+     "toppings":[
+            {
+                "sabor": "chocolate",
+                "quantity": "2 bolas"
+            }
+          
+        ]
+    },
+     {
+     "id": "0001",
+     "type": "morango",
+     "price": "19.99 R$",
+     "toppings":[
+            {
+                "sabor": "morango",
+                "quantity": "2 bolas"
+            }
+          
+        ]
+    }
+]

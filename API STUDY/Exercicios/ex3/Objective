@@ -1,0 +1,35 @@
+Exercício: Clima em Tempo Real ☀️🌧️
+
+Você já treinou fetch() com a Bored API. Agora vamos usar Axios pra fazer a mesma coisa (buscar dados de uma API), mas com sintaxe diferente — e dessa vez no servidor (Node/Express), não no navegador.
+
+A ideia:
+
+Um formulário simples onde o usuário digita o nome de uma cidade
+O servidor recebe essa cidade, usa Axios pra buscar o clima numa API de tempo real
+Mostra na tela: temperatura, condição do tempo (ex: "nublado"), cidade
+
+API sugerida: Open-Meteo — é gratuita, não precisa de chave/cadastro, ótima pra praticar.
+
+O que muda do fetch pro axios:
+
+javascript
+// fetch (o que você já sabe)
+fetch("url")
+    .then(resposta => resposta.json())
+    .then(dados => { ... })
+    .catch(erro => { ... });
+
+// axios (estrutura nova)
+axios.get("url")
+    .then(resposta => {
+        // resposta.data já vem pronto, sem precisar de .json()!
+    })
+    .catch(erro => { ... });
+
+Repara: o Axios já devolve os dados prontos em resposta.data — você pula o passo do .json() manual que tinha no fetch.
+
+Primeiro passo:
+
+Instala o axios no seu projeto: npm install axios
+Importa no index.js: import axios from "axios";
+Tenta um teste simples primeiro (sem formulário ainda): faz uma chamada axios.get() pra Open-Meteo com uma cidade fixa (ex: São Paulo, lat/long fixos) e dá um console.log(resposta.data) pra ver o que volta.

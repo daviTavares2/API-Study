@@ -1,0 +1,27 @@
+Exercício: Cardápio de Pizzaria 🍕
+
+A ideia: o cliente escolhe um sabor de pizza, e o servidor mostra os detalhes daquela pizza específica.
+
+Estrutura sugerida do JSON (você escreve):
+
+Precisa ser um array com 3 objetos (pizzas diferentes) — igual ao modelo do Taco Town, não como o do sorvete 
+(que tinha 1 objeto só). Cada pizza deve ter:
+
+- id
+- name (ex: "Margherita", "Calabresa", "Quatro Queijos")
+- price
+- ingredients (array — cada ingrediente com "name" e "quantity")
+- size (ex: "Grande")
+Passo 1
+
+Escreve o JSON com as 3 pizzas, cada uma com pelo menos 3 ingredientes no array.
+
+Passo 2 — Checklist do que evitar (baseado nos bugs de agora)
+
+Antes de me mandar, revisa você mesmo com essas perguntas:
+
+ Meu JSON é um array de 3 objetos (não 1 objeto com um array de sabores dentro)?
+ Cada case do switch pega um índice diferente ([0], [1], [2])?
+ Meu res.redirect() tem o destino escrito dentro dos parênteses?
+ No EJS, o forEach está dentro de uma tag <% %> (lógica), não dentro de <%= %> (mostrar valor)?
+ Tudo que depende de recipe (inclusive o preço!) está dentro do if(locals.recipe)?

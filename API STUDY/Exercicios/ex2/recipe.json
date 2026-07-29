@@ -1,0 +1,27 @@
+[
+    {
+        "id":"0001",
+        "type":"pizza",
+        "name":"Margherita",
+        "price":"69:90",
+        "ingredients": "Recheio de queijo com tomate e folha",
+        "tamanhos":["Grande","Médio","Pequeno"]
+    },
+       {
+        "id":"0001",
+        "type":"pizza",
+        "name":"Frango & catupiry",
+        "price":"69:90",
+        "ingredients": "Recheio de queijo com frango e catupiry",
+        "tamanhos":["Grande","Médio","Pequeno"]
+    },
+       {
+        "id":"0001",
+        "type":"pizza",
+        "name":"calabresa",
+        "price":"69:90",
+        "ingredients": "Recheio de queijo com calabresa e Cebola",
+        "tamanhos":["Grande","Médio","Pequeno"]
+    }
+
+]

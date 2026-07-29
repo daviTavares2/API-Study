@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/recipe" method="POST" class="buttons">
+        <label for="categoria">Sabor</label>
+            <select name="escolha" id="select">
+            <option type="submit" value="marguerita" name="choice">Marguerita</option>
+            <option type="submit" value="calabresa" name="choice" >Calabresa</option>
+            <option type="submit" value="catupiry" name="choice">Frango com catupiry</option>
+        </select>
+        <button type="submit">Enviar pedido</button>
+    </form>
+
+    <%if(locals.recipe){%>
+        <h1>
+            Nome:<%= recipe.name %>
+        </h1>
+        <ul>
+            <li><%=recipe.ingredients%></li>
+        </ul>
+    <%}%>  
+
+</body>
+</html>

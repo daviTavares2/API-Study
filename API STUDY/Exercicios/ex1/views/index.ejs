@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form action="/recipe" method="POST" class="buttons">
+        <button type="submit" value="baunilha" name="choice">Baunilha</button>
+        <button type="submit" value="chocolate" name="choice">Chocolate</button>
+        <button type="submit" value="morango" name="choice">morango</button>
+     </form>
+
+     <%if(locals.recipe){%>
+        <h1><% recipe.toppings.forEach(topping =>{ %>
+            <%= topping.sabor %> &  <%= topping.quantity %>
+       <% }) %>
+        </h1>
+         
+        <h1>Preço: <%= recipe.price %></h1>
+     <% } %>
+      
+</body>
+</html> 
