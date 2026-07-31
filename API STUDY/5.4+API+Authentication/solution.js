@@ -2,7 +2,7 @@ import express from "express";
 import axios from "axios";
 
 const app = express();
-const port = 3000;
+const port = 3001;
 const API_URL = "https://secrets-api.appbrewery.com";
 
 // TODO: Replace the values below with your own before running this file.
@@ -34,7 +34,8 @@ app.get("/basicAuth", async (req, res) => {
     });
     res.render("index.ejs", { content: JSON.stringify(result.data) });
   } catch (error) {
-    res.status(404).send(error.message);
+     console.log("error");
+    res.render("index.ejs", {error : "Error"});
   }
 });
 
