@@ -1,0 +1,44 @@
+Exercício: Explorador de Cachorros 🐶
+
+Vamos praticar Axios com uma API diferente — a Dog CEO API (gratuita, sem chave, ótima pra path parameters).
+
+A API:
+GET https://dog.ceo/api/breeds/image/random
+
+→ Devolve uma foto aleatória de qualquer cachorro.
+
+GET https://dog.ceo/api/breed/{raça}/images/random
+
+→ Devolve uma foto aleatória de uma raça específica (ex: pug, poodle, bulldog).
+
+Repara: essa API usa path parameter (a raça vai dentro da URL, tipo o /activity/3943506 que vimos), diferente d a Bored 
+API
+que usava query param (?type=...). Boa variação pra treinar!
+
+O que construir:
+GET / → ao abrir a página, já busca e mostra um cachorro aleatório (igual o exercício do clima fazia com atividades)
+Formulário com um campo de texto onde o usuário digita uma raça (ex: "husky")
+POST / → recebe a raça digitada, monta a URL com path parameter (não query!), busca a foto daquela raça específica
+ e
+ mostra
+Tratamento de erro: se o usuário digitar uma raça que não existe, a API retorna um erro — mostre uma mensagem tipo 
+"raça não 
+encontrada" (use try/catch, igual no exercício do clima)
+Mostra a imagem na tela com uma tag <img>
+Desafio extra do EJS (novo!):
+
+A URL da imagem vem dentro de response.data.message. No seu <img>, você vai precisar fazer algo tipo:
+
+ejs
+<img src="<%= data.message %>" />
+
+Repare que aqui o <%= %> está dentro de um atributo HTML, não sozinho numa linha — sintaxe um pouco diferente do que você já viu.
+
+Pontos de atenção (baseado nos seus bugs anteriores):
+
+ Path parameter vai direto na URL (com crase/template string), não depois de ?
+ GET / e POST / fazem chamadas diferentes à API, cada uma na sua própria rota
+ try/catch pra quando a raça não existir
+ if(locals.data) no EJS antes de tentar mostrar a imagem
+
+Testa a API primeiro no navegador mesmo (cola a URL lá) pra ver o formato da resposta antes de codar. Bora! 🐕
