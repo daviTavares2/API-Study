@@ -11,7 +11,7 @@ GET https://dog.ceo/api/breed/{raça}/images/random
 
 → Devolve uma foto aleatória de uma raça específica (ex: pug, poodle, bulldog).
 
-Repara: essa API usa path parameter (a raça vai dentro da URL, tipo o /activity/3943506 que vimos), diferente d a Bored 
+Repara: essa API usa path parameter (a raça vai dentro da URL, tipo o /activity/3943506 que vimos), diferente d                                                                 a Bored 
 API
 que usava query param (?type=...). Boa variação pra treinar!
 
