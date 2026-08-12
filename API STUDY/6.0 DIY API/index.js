@@ -14,6 +14,16 @@ app.get("/random" , (req,res)=>{
 });
 
 //2. GET a specific joke
+app.get("/jokes/: id", async (req, res)=>{
+  const id = req.params.id;
+  try {
+    const response = await axios.get(`https://secrets-api.appbrewery.com/${id}`);
+    const result = response.data;
+    res.json(result);
+  } catch(error){
+    res.status(404);
+  }
+});
 
 //3. GET a jokes by filtering on the joke type
 
